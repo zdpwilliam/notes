@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.william.news.dao.ICategoryTagDao" >
+    <resultMap id="NewsCategoryMap" type="com.william.news.model.NewsCategory">
+        <id property="id" column="id"/>
+        <result property="categoryName" column="category_name"/>
+        <result property="substitutedTitle" column="substituted_name"/>
+        <result property="coverPath" column="cover_path"/>
+        <result property="modifiable" column="modifiable"/>
+        <result property="createAt" column="created_at"/>
+        <result property="updateAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="selectAllNewsCategories" resultMap="NewsCategoryMap">
+        SELECT  *  FROM news_category ORDER BY created_at DESC
+    </select>
+
+    <insert id="addNewsCategory" parameterType="com.william.news.model.NewsCategory"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO news_category (category_name, substituted_name, modifiable, created_at, updated_at)
+        VALUES (#{categoryName}, #{substitutedTitle}, 1, now(), now())
+    </insert>
+</mapper>

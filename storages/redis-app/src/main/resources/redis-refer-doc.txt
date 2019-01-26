@@ -1,0 +1,9 @@
+使用和场景
+https://redisbook.readthedocs.io/en/latest/
+http://www.infoq.com/cn/articles/tq-redis-memory-usage-optimization-storage
+https://www.teakki.com/p/57e224430906a5d20a8f90f3
+http://www.runoob.com/redis/redis-benchmarks.html
+https://kikoroc.com/2016/05/03/redis-best-practice.html
+
+性能问题
+http://zhupan.iteye.com/blog/1576108

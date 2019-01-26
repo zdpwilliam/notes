@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:redis="http://www.springframework.org/schema/redis"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/redis http://www.springframework.org/schema/redis/spring-redis-1.0.xsd"
+       default-lazy-init="false">
+
+    <context:annotation-config />
+    <context:component-scan base-package="com.william.springdata" />
+
+    <bean id="jedisConnFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          p:use-pool="true" p:password="123456"/>
+
+    <!-- redis template definition -->
+    <bean id="redisTemplate"
+          class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnFactory"/>
+
+    <!--<bean id="redisConfig" class="com.zmlearn.framework.cache.redis.config.RedisConfig">
+        <property name="maxTotal" value="${framework.cache.redis.pool.maxTotal}"/>
+        <property name="maxIdle" value="${framework.cache.redis.pool.maxIdle}"/>
+        <property name="minIdle" value="0"/>
+        <property name="minEvictableIdleTimeMillis" value="${framework.cache.redis.pool.minEvictableIdleTimeMillis}"/>
+        <property name="softMinEvictableIdleTimeMillis"
+                  value="${framework.cache.redis.pool.softMinEvictableIdleTimeMillis}"/>
+        <property name="numTestsPerEvictionRun" value="3"/>
+        <property name="testOnBorrow" value="${framework.cache.redis.pool.testOnBorrow}"/>
+
+        <property name="mode" value="${spring.redis.sentinel.mode}"/>
+        <property name="master" value="${spring.redis.sentinel.master}"/>
+        <property name="nodes" value="${spring.redis.sentinel.nodes}"/>
+
+        <property name="password" value="${spring.redis.sentinel.password}"/>
+    </bean>
+    <bean id="redisFactory" class="com.zmlearn.framework.cache.redis.factory.RedisFactory" destroy-method="destroy">
+        <constructor-arg ref="redisConfig"/>
+    </bean>
+    <bean id="jedisConnectionFactory" factory-bean="redisFactory" factory-method="getJedisConnectionFactory"/>
+    <bean id="stringRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory"/>
+    <bean id="redisCachedTemplate" class="com.zmlearn.framework.cache.redis.template.RedisCachedTemplate"
+          p:connection-factory-ref="jedisConnectionFactory"/>
+    <bean id="redisCached" class="com.zmlearn.framework.cache.redis.impl.RedisCachedImpl">
+        <property name="redisTemplate" ref="redisCachedTemplate"/>
+    </bean>-->
+
+    <!--<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="32"></property>
+        <property name="maxIdle" value="6"></property>
+        <property name="minIdle" value="0"></property>
+        <property name="minEvictableIdleTimeMillis" value="300000"></property>
+        <property name="numTestsPerEvictionRun" value="3"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="60000"></property>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="destroy">
+        <constructor-arg ref="jedisPoolConfig"></constructor-arg>
+        <constructor-arg value="nightly-test.zm1v1.com"></constructor-arg>
+    </bean>-->
+</beans>

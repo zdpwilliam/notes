@@ -1,0 +1,22 @@
+server:
+  port: 8001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8881/eureka/
+spring:
+  application:
+    name: MY-TEST
+
+# 分开为 client 和 server 两个项目
+
+server:
+  port: 8881
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

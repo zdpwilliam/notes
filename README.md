@@ -1,0 +1,2 @@
+# Notes
+### FreeNote note everything !

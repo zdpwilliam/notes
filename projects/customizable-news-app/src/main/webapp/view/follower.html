@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>可定制的新闻系统</title>
+
+    <link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="../resources/jquery/jquery.min.js"></script>
+    <script src="../resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .header-brackground {
+            background: url("../pages/header-bak.png") repeat;
+            height: 70px;
+        }
+
+        .header {
+            position: relative;
+            width: 860px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -430px;
+        }
+
+        .header a {
+            font-size: 14px;
+            color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+
+        .header-brand {
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            height: 100%;
+            width: 200px;
+            position: relative;
+        }
+
+        .header-brand a {
+            position: relative;
+            font-size: inherit;
+            top: 20px;
+            text-decoration: none;
+        }
+
+        .header-content {
+            width: 400px;
+            height: 100%;
+            margin-left: 100%;
+            position: relative;
+            top: 10px;
+            left: -400px;
+        }
+
+        .body-content {
+            position: relative;
+            width: 860px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -430px;
+        }
+
+        .clear {
+            clear: both;
+            height: 2px;
+        }
+
+        .news {
+            position: relative;
+            top: 20px;
+        }
+
+        .new {
+            margin-top: 18px;
+            padding-bottom: 8px;
+        }
+
+        .new-div {
+            margin-top: 1px;
+            height: 80px;
+        }
+
+        .new-icon {
+            height: 100%;
+            float: left;
+            width: 135px;
+        }
+
+        .new-content {
+            height: 100%;
+            float: left;
+            width: 700px;
+            position: relative;
+            left: 8px;
+        }
+
+        .new-title {
+            font-size: 22px;
+            color: #141719;
+        }
+
+        .new-info {
+            position: relative;
+            top: 4px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .new-detail {
+            text-align: center;
+            width: inherit;
+            color: black;
+            font-size: 14px;
+        }
+
+        .content-top {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .content-top span {
+            position: relative;
+            float: right;
+            top: 10px;
+            right: 10%;
+        }
+
+        .content-center {
+            font-size: 16px;
+            font-style: inherit;
+        }
+
+        .comments {
+            margin: 20px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .follow-btn {
+            position: relative;
+            float: right;
+            top: -25px;
+            right: 10%;
+            color: #2AAFEC;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .follow-btn a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .content-bottom {
+            margin-bottom: 50px;
+        }
+
+        .footer-content {
+            background: url("../pages/header-bak.png") repeat;
+            height: 70px;
+            font-size: 13px;
+            color: #ffffff;
+            padding-top: 16px;
+        }
+
+        .footer-content a {
+            position: relative;
+            font-size: inherit;
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar header-brackground">
+        <div class="header">
+            <div class="navbar-header header-brand">
+                <a class="header-brand" href="#">可定制的新闻系统</a>
+            </div>
+
+            <div class="header-content">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页</a></li>
+                    <li class="active"><a href="#">我的订阅</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">搜索</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Z_D鹏 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">我的订阅</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">我的关注</a></li>
+                            <li><a href="#">个人设置</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body-content">
+    <div class="content-top">
+        <h3 class="text-center">国务院：发生重大疫苗安全事件 地方政府主要负责人应引咎辞职</h3>
+        <span>澎湃新闻 2016-04-25 17:18</span>
+        <div class="clear"></div>
+    </div>
+    <div class="content-center">
+        <div class="row">
+            <div class="span12">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 中华人民共和国国务院令
+                    第668号
+
+                    《国务院关于修改〈疫苗流通和预防接种管理条例〉的决定》已经2016年4月13日国务院第129次常务会议通过，现予公布，自公布之日起施行。
+
+                    总理 李克强
+
+                    2016年4月23日
+
+                    国务院关于修改《疫苗流通和
+
+                    预防接种管理条例》的决定
+
+                    国务院决定对《疫苗流通和预防接种管理条例》作如下修改：
+
+                    一、将第十条修改为：“采购疫苗，应当通过省级公共资源交易平台进行。”
+
+                    二、将第十五条修改为：“第二类疫苗由省级疾病预防控制机构组织在省级公共资源交易平台集中采购，由县级疾病预防控制机构向疫苗生产企业采购后供应给本行政区域的接种单位。
+
+                    “疫苗生产企业应当直接向县级疾病预防控制机构配送第二类疫苗，或者委托具备冷链储存、运输条件的企业配送。接受委托配送第二类疫苗的企业不得委托配送。
+
+                    “县级疾病预防控制机构向接种单位供应第二类疫苗可以收取疫苗费用以及储存、运输费用。疫苗费用按照采购价格收取，储存、运输费用按照省、自治区、直辖市的规定收取。收费情况应当向社会公开。”
+                </p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="row">
+            <div class="span12">
+                <div class="post-comment-form">
+                    <span>评论 (3)</span>
+                    <form id="comment-form" novalidate="novalidate" class="simple_form new_comment"
+                          action="/posts/363929/comments" accept-charset="UTF-8" data-remote="true" method="post"><input
+                            name="utf8" type="hidden" value="✓">
+                        <div class="form-group text required comment_content">
+                            <label class="text required sr-only" for="comment_content">
+                                <abbr title="required">*</abbr> 评论
+                            </label>
+                            <textarea rows="5" class="text required comment-content form-control"
+                                name="comment[content]" id="comment_content">
+                            </textarea>
+                        </div>
+                        <div class="text-right">
+                            <input type="submit" name="commit" value="提 交" class="btn btn-default btn-info">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="span12">
+                <div id="comments" class="comments">
+                    <div class="media">
+                        <a class="media-left" href="/u/137438"><img src="http://toutiaoio.qiniudn.com/user/e8c6db8ff02340538196b1eff8216580/thumb" alt="Thumb"></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Celery_W <small class="date">2016-04-26 00:31</small></h4>
+                            <div>微信使用syncid</div>
+                        </div>
+                        <div class="follow-btn">
+                            <a href="#" >关注</a>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="media-left" href="/u/126272"><img
+                                src="http://toutiaoio.qiniudn.com/user/1ee2ad8ef5354de288d48e6e1ea2580c/thumb"
+                                alt="Thumb"></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">sbbic
+                                <small class="date">2016-04-25 14:08</small>
+                            </h4>
+                            <div>童鞋你好萌</div>
+                        </div>
+                        <div class="follow-btn">
+                            <a href="#">关注</a>
+                        </div>
+                    </div>
+                    <div class="media" >
+                        <a class="media-left" href="/u/224206"><img
+                                src="http://toutiaoio.qiniudn.com/user/d33a7f7a0105455487ff0f8809101be6/thumb"
+                                alt="Thumb"></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">活在喵星的人
+                                <small class="date">2016-04-25 12:57</small>
+                            </h4>
+                            <div>虽然被标题骗进来了，但还是讲的不错的。</div>
+                        </div>
+                        <div class="follow-btn">
+                            <a href="#">关注</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="content-bottom">
+        <div class="clear"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <p class="text-center">
+            <a href="about.htm" tppabs="">关于我们</a>
+            <a href="download.htm" tppabs="">可定制的新闻</a>
+            <a target="_blank" href="" tppabs="http://weekly.manong.io/">凤凰新闻</a>
+            <a target="_blank" href="" tppabs="http://job.manong.io/">新浪新闻</a>
+            <a href="tags.htm" tppabs="http://toutiao.io/tags">新闻头条</a>
+            <a id="install-chrome-extension" target="_blank" href="" tppabs="">安装 Chrome 一键分享插件</a>
+        </p>
+        <p class="text-center">&copy; 2013-2016 美国网络信息技术有限公司 版权所有 沪ICP备18217177521号-7</p>
+    </div>
+</footer>
+</body>
+</html>

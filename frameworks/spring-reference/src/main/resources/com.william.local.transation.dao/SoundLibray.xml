@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.william.local.transation.dao.ISoundLibraryDao">
+
+    <resultMap id="ipWhiteListMap" type="com.william.local.transation.model.IPWhiteList">
+        <id property="id" column="id"/>
+        <result property="ipAddress" column="ip_address"/>
+        <result property="libraryId" column="library_id"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+    
+    <select id="selectIPWhiteList" resultMap="ipWhiteListMap">
+        SELECT * from ip_white_list WHERE library_id = #{libraryId}
+    </select>
+
+    <insert id="insertIPWhiteList" parameterType="com.william.local.transation.model.IPWhiteList"
+    	useGeneratedKeys="true" keyProperty="id">
+       INSERT INTO ip_white_list (ip_address, library_id, created_at, updated_at)
+       VALUES (#{ipAddress}, #{libraryId}, now(), now())
+    </insert>
+
+    <update id="updateIPWhiteList" parameterType="com.william.local.transation.model.IPWhiteList">
+		UPDATE ip_white_list
+		SET ip_address = #{ipAddress}, library_id = #{libraryId}, updated_at = now()
+		WHERE id = #{id}
+    </update>
+
+    <resultMap id="libraryInfoMap" type="com.william.local.transation.model.LibraryInfo">
+        <id property="id" column="id"/>
+        <result property="libraryName" column="library_name"/>
+        <result property="libraryBanner" column="library_banner"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="selectLibraryInfos" resultMap="libraryInfoMap">
+        SELECT * from library_info
+    </select>
+
+    <insert id="insertLibraryInfo" parameterType="com.william.local.transation.model.LibraryInfo"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO library_info (library_name, library_banner, created_at, updated_at)
+        VALUES (#{libraryName}, #{libraryBanner}, now(), now())
+    </insert>
+
+    <update id="updateLibraryInfo" parameterType="com.william.local.transation.model.LibraryInfo">
+        UPDATE library_info
+        SET library_name = #{libraryName}, library_banner = #{libraryBanner}, updated_at = now()
+        WHERE id = #{id}
+    </update>
+</mapper>

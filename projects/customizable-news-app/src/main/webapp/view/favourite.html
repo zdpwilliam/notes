@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>可定制的新闻系统</title>
+
+    <link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="../resources/jquery/jquery.min.js"></script>
+    <script src="../resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .header-brackground {
+            background: url("../pages/header-bak.png") repeat;
+            height: 70px;
+        }
+
+        .header {
+            position: relative;
+            width: 860px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -430px;
+        }
+
+        .header a {
+            font-size: 14px;
+            color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+
+        .header-brand {
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            height: 100%;
+            width: 200px;
+            position: relative;
+        }
+
+        .header-brand a {
+            position: relative;
+            font-size: inherit;
+            top: 20px;
+            text-decoration: none;
+        }
+
+        .header-content {
+            width: 400px;
+            height: 100%;
+            margin-left: 100%;
+            position: relative;
+            top: 10px;
+            left: -400px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+        }
+
+        .content {
+            position: relative;
+            width: 822px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -411px;
+        }
+
+        .button {
+            width: 100px;
+            color: #fff;
+            background-color: #19a9d5;
+            border: none;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        .text {
+            height: 28px;
+            width: 328px;
+        }
+
+        .news {
+            position: relative;
+            top: 20px;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #141719;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #428bca;
+        }
+
+        .new {
+            margin-top: 10px;
+            padding-bottom: 8px;
+            height: 70px;
+            padding-top: 8px;
+        }
+
+        .fav-con {
+            width: 500px;
+            float: left;
+            position: relative;
+            left: 10px;
+        }
+
+        .new-div {
+            color: #999;
+            font-size: 12px;
+            margin-top: 8px;
+            position: relative;
+            top: 7px;
+        }
+
+        .fav-on {
+            background: url("../pages/fac-on.png") no-repeat;
+            width: 42px;
+            height: 23px;
+        }
+
+        .fav-off {
+            background: url("../pages/fac-off.png") no-repeat;
+            width: 42px;
+            height: 23px;
+        }
+
+        .fav-left {
+            background: url("../pages/fav-left.png") no-repeat;
+            width: 42px;
+            height: 41px;
+        }
+
+        .left-icon {
+            float: left;
+        }
+
+        .new-title {
+            color: #000;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .new-title {
+            color: #000;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .fav-count {
+            background: url("../pages/fav-count.png") no-repeat;
+            width: 23px;
+            height: 23px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar header-brackground">
+        <div class="header">
+            <div class="navbar-header header-brand">
+                <a class="header-brand" href="#">可定制的新闻系统</a>
+            </div>
+
+            <div class="header-content">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">发现</a></li>
+                    <li class="active"><a href="#">我的订阅</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">搜索</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Z_D鹏 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">我的订阅</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">我的关注</a></li>
+                            <li><a href="#">个人设置</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="search">
+        <input type="button" value="我的收藏" class="button"/>
+    </div>
+    <div class="news">
+        <div class="new">
+            <div class="left-icon">
+                <div class="fav-left"></div>
+                <div class="fav-on"></div>
+            </div>
+            <div class="fav-con">
+                <div class="title">
+                    <a href="javascript:void(0)" class="new-title">阿里宣布开源 Weex，亿级应用匠心打造跨平台移动开发工具</a>
+                </div>
+                <div class="news-content">
+                    <span>用户名:</span>fav-count
+                    <span>评论数:</span>3
+                </div>
+            </div>
+        </div>
+        <div class="new">
+            <div class="left-icon">
+                <div class="fav-left"></div>
+                <div class="fav-on"></div>
+            </div>
+            <div class="fav-con">
+                <div class="title">
+                    <a href="javascript:void(0)" class="new-title">阿里宣布开源 Weex，亿级应用匠心打造跨平台移动开发工具</a>
+                </div>
+                <div class="news-content">
+                    <span>用户名:</span>fav-count
+                    <span>评论数:</span>3
+                </div>
+            </div>
+        </div>
+        <div class="new">
+            <div class="left-icon">
+                <div class="fav-left"></div>
+                <div class="fav-on"></div>
+            </div>
+            <div class="fav-con">
+                <div class="title">
+                    <a href="javascript:void(0)" class="new-title">阿里宣布开源 Weex，亿级应用匠心打造跨平台移动开发工具</a>
+                </div>
+                <div class="news-content">
+                    <span>用户名:</span>fav-count
+                    <span>评论数:</span>3
+                </div>
+            </div>
+        </div>
+        <div class="new">
+            <div class="left-icon">
+                <div class="fav-left"></div>
+                <div class="fav-on"></div>
+            </div>
+            <div class="fav-con">
+                <div class="title">
+                    <a href="javascript:void(0)" class="new-title">阿里宣布开源 Weex，亿级应用匠心打造跨平台移动开发工具</a>
+                </div>
+                <div class="news-content">
+                    <span>用户名:</span>fav-count
+                    <span>评论数:</span>3
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>可定制的新闻系统</title>
+
+    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .header-brackground {
+            background: url("/resources/images/header-bak.png") repeat;
+            height: 70px;
+        }
+
+        .header {
+            position: relative;
+            width: 860px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -430px;
+        }
+
+        .header a {
+            font-size: 14px;
+            color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+
+        .header-brand {
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            height: 100%;
+            width: 200px;
+            position: relative;
+        }
+
+        .header-brand a {
+            position: relative;
+            font-size: inherit;
+            top: 20px;
+            text-decoration: none;
+        }
+
+        .header-content {
+            width: 400px;
+            height: 100%;
+            margin-left: 100%;
+            position: relative;
+            top: 10px;
+            left: -400px;
+        }
+
+        .body-content {
+            position: relative;
+            width: 860px;
+            margin-left: 50%;;
+            height: 100%;
+            left: -430px;
+        }
+
+        .clear {
+            clear: both;
+            height: 1px;
+        }
+
+        .news {
+            position: relative;
+            top: 20px;
+        }
+
+        .new {
+            margin-top: 18px;
+            padding-bottom: 8px;
+        }
+
+        .new-div {
+            margin-top: 1px;
+            height: 80px;
+        }
+
+        .new-icon {
+            height: 100%;
+            float: left;
+            width: 135px;
+        }
+
+        .new-content {
+            height: 100%;
+            float: left;
+            width: 700px;
+            position: relative;
+            left: 8px;
+        }
+
+        .new-title {
+            font-size: 22px;
+            color: #141719;
+        }
+
+        .new-info {
+            position: relative;
+            top: 4px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .content-top {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .content-center {
+
+        }
+
+        .content-bottom {
+            margin-bottom: 50px;
+        }
+
+        .footer-content {
+            background: url("/resources/images/header-bak.png") repeat;
+            height: 70px;
+            font-size: 13px;
+            color: #ffffff;
+            padding-top: 16px;
+        }
+        .footer-content a {
+            position: relative;
+            font-size: inherit;
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar header-brackground">
+        <div class="header">
+            <div class="navbar-header header-brand">
+                <a class="header-brand" href="#">可定制的新闻系统</a>
+            </div>
+
+            <div class="header-content">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页</a></li>
+                    <li class="active"><a href="#">我的订阅</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">搜索</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">Z_D鹏 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">我的订阅</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">我的关注</a></li>
+                            <li><a href="#">个人设置</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body-content">
+    <div class="content-top">
+        <input type="button" value="我的新闻" class="btn-info"/>
+        <input type="text" class="text"/>
+    </div>
+    <div class="content-center">
+        <div class="news">
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-02.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>国务院：发生重大疫苗安全事件 地方政府主要负责人应引咎辞职</span>
+                        </div>
+                        <div class="new-info">
+                                中华人民共和国国务院令 第668号《国务院关于修改〈疫苗流通和预防接种管理条例〉的决定》已经2016年4月13日国务院第129次常务会议通过，现予公布，自公布之日起施行。
+                            总理 李克强2016年4月23日 国务院关于修改《疫苗流通和预防接种管理条例》的决定国务院决定对《疫苗流通和预防接种管理条例》作如下修改：
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-04.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>不知前世修来多少福气，嫁给黄磊她从18到38岁都不知</span>
+                        </div>
+                        <div class="new-info">
+                            《极限挑战第二季》自2016年4月17日起，又重新回到观众的眼球中，仍记得极限1里面的“极限三傻”: 王迅、张艺兴、孙红雷，以及“极限三精”:黄渤、黄磊、罗志祥。一个...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-05.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>郜林变宋慧乔被彻底玩坏！王晨晒P图恒大版《太阳的</span>
+                        </div>
+                        <div class="new-info">
+                            （哈哈哈哈哈哈哈哈哈谁p的哈哈哈哈哈哈是什么让王晨如此大笑？身为段子手，如此大笑也实属罕见！原来，王晨在微博上晒了一个恒大版的太阳的后裔，被恶搞的自然是郜林。这张P图确实让人合不拢嘴，球迷见后也被逗得前仰后合，“这是太阳的后妈吗”？更有球迷表示这才是正版！宋慧乔被换成了郜林，宋仲基...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-06.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>17年了，《绝代双骄》里的邀月宫主，现在竟然长这样！</span>
+                        </div>
+                        <div class="new-info">
+                            《绝代双骄》大家都看过吧，这可是橘子君小时候最爱的剧之一了。那时的苏有朋和林志颖都是妥妥的男神啊。还记得里面那个霸气的移花宫宫主邀月吗？她武功高强，心狠手辣，后来甚至把自己的亲妹妹杀了。不过仔细看，其实邀月真的是很标准的古装美女啊。邀月宫主的真名叫于莉，1963年出生于哈尔滨，本...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-07.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>港媒称中国将在黄岩岛填海建机场 外交部回应 </span>
+                        </div>
+                        <div class="new-info">
+                            【环球网综合报道】外交部发言人华春莹今天举行例行记者会,具体内容如下:一、应外交部长王毅邀请,俄罗斯联邦外交部长谢尔盖·维克托罗维奇·拉夫罗夫将于4月28日至29...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-03.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>梅葆玖今日离世，一代京剧大师告别传奇人生</span>
+                        </div>
+                        <div class="new-info">
+                            他是一代京剧大师之子，也是一位京剧大师；他是会说英语，爱吃牛排的京剧表演艺术家；他是49个徒弟的恩师，他是20只猫的主人……贴在梅葆玖身上的标签很多，但如...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-01.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>日媒:美军6架战机飞越中国黄岩岛上空</span>
+                        </div>
+                        <div class="new-info">
+                            （原标题：四川原副省长李成云：出身寒门 终毁权色）李成云4月9日，中央纪委网站宣布，
+                            四川省原副省长李成云涉嫌严重违纪，接受组织调查，这已是其“二进宫”。早在2011年，他就因违纪被免去四川...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-08.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>高架“闯禁区”整治效果初显 一周共查处违法车辆5719起 </span>
+                        </div>
+                        <div class="new-info">
+                            高架“限行新政”实施已有十天，今天下午15时许，记者跟随高架交警再次来到之前整治过的南北高架北向南共江路上匝道处，1小时的整治行动中，共查处相关“闯禁区”车辆54起，扣车4辆。记者了解到，整治以来，“闯禁区”的违法车辆已较此前有大幅下降，整治效果初显。据悉，一周内，全市交警共查处...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-09.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>拉米雷斯：迟早回巴西队！中超不会让我退步 呼吁巴西人多看中超  </span>
+                        </div>
+                        <div class="new-info">
+                            随着巴西Bandsport体育电台正式开始对中超的转播，越来越多的巴西人开始将目光对准这个新兴的市场。近日，效力于江苏苏宁的巴西球星拉米雷斯接受了Bandsport的采...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="new-div">
+                    <div class="new-icon">
+                        <img src="/resources/images/new-10.png">
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <span>何炅的孩子 何炅已为人夫为人父?报料者称孩子约有四五岁</span>
+                        </div>
+                        <div class="new-info">
+                            快乐大本营的何炅是我国知名主持人,，原来是北京外国语大学阿拉伯语系教师。可是就他的那个形象，怎么也和他的教师的形象联系不起来呢。人家现在已经是快乐大本营的妖精级别的人物了，自1998年起,主持湖南卫视的《快乐大本营》栏目长达十余年，该退了吧，呵呵，只是随便说说，很喜欢他的支持风格...
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-bottom">
+        <div class="clear"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <p class="text-center">
+            <a href="about.htm" tppabs="">关于我们</a>
+            <a href="download.htm" tppabs="">可定制的新闻</a>
+            <a target="_blank" href="" tppabs="http://weekly.manong.io/">凤凰新闻</a>
+            <a target="_blank" href="" tppabs="http://job.manong.io/">新浪新闻</a>
+            <a href="tags.htm" tppabs="http://toutiao.io/tags">新闻头条</a>
+            <a id="install-chrome-extension" target="_blank" href="" tppabs="">安装 Chrome 一键分享插件</a>
+        </p>
+        <p class="text-center">&copy; 2013-2016 美国网络信息技术有限公司 版权所有 沪ICP备18217177521号-7</p>
+    </div>
+</footer>
+</body>
+</html>

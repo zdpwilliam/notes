@@ -1,0 +1,2 @@
+- RabbitMQ 中文文档
+- http://rabbitmq.mr-ping.com/

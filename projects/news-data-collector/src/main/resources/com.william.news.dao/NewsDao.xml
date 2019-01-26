@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.william.news.dao.INewsDao">
+    <resultMap id="newsMap" type="com.william.news.model.News">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="subTitle" column="sub_title"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="selectNewsByCategoryId" resultMap="newsMap">
+        SELECT * FROM news WHERE category_id = #{categoryId}
+    </select>
+
+    <insert id="insertLatestNewsToRepo" parameterType="com.william.news.model.News"
+            useGeneratedKeys="true" keyProperty="id">
+       INSERT INTO news (title, sub_title, category_id, created_at, updated_at)
+       VALUES (#{title}, #{subTitle}, #{categoryId}, now(), now())
+    </insert>
+</mapper>
