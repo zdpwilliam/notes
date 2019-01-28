@@ -14,7 +14,7 @@ public class LambdaExp {
 
     public static void main(String[] args) {
         List<A> aList = new ArrayList<>();
-        List<Long> list = aList.stream().map(A::getId).collect(Collectors.toList());
+        List<Long> list = aList.stream().map(A :: getId).collect(Collectors.toList());
         //需要事先判断一下，stream一定会开启一个数据流的过程么.
         System.out.println(list == Collections.EMPTY_LIST);
     }
