@@ -69,3 +69,5 @@ Micro Services是一种特殊的松散耦合（loosely coupled）拥有独立的
 - 支撑服务层：MQ,缓存,job,数据访问
 - 平台服务层：基于容器技术,k8s,容器调度平台,CMDB,还有权限管控,身份认证
 - 基础设施层：基础运维团队维护 (运维相关)
+
+> [可参考看云文档](https://www.kancloud.cn/architect-jdxia/architect/519429)
