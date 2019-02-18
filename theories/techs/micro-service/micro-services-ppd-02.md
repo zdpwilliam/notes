@@ -123,6 +123,6 @@
 
 基于容器云发布体系
 
-![service-deploy](./service-deploy.png)
+![service-deploy](service-deploy.png)
 
 > [可参考看云文档](https://www.kancloud.cn/architect-jdxia/architect/519429)
