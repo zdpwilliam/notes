@@ -11,6 +11,8 @@ http://localhost:8080/oauth/authorize?client_id=clientapp&redirect_uri=http://lo
 
 **注意：state参数暂忽略**
 
+根据提示输入用户名密码(在[application.properties](src/main/resources/application.properties)文件里头)进行认证，并Approve授权。
+
 响应案例：
 
 http://localhost:9001/callback?code=8uYpdo
