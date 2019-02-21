@@ -1,6 +1,9 @@
 package com.william.authcode.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -18,16 +21,21 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableAuthorizationServer
 public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients)
             throws Exception {
         clients.inMemory()
-                .withClient("clientapp")
-                .secret("112233")
-                .redirectUris("http://localhost:9001/callback")
+                .withClient("first-client")
+                .secret(passwordEncoder().encode("1234"))
                 // 授权码模式
                 .authorizedGrantTypes("authorization_code")
-                .scopes("read_userinfo", "read_contacts");
+                .scopes("read_userinfo", "read_contacts")
+                .redirectUris("http://localhost:9001/callback");
     }
 
 }

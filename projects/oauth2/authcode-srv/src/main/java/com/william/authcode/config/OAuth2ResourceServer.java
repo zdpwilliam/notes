@@ -26,8 +26,6 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
                 .and()
                 .requestMatchers()
                 .antMatchers("/api/**");
-        http.formLogin().loginPage("/login").failureUrl("/login?error").permitAll();
-        http.logout().permitAll();
     }
 
 }
