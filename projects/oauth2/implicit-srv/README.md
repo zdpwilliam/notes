@@ -7,7 +7,7 @@
 
 浏览器请求：
 
-http://localhost:8080/oauth/authorize?client_id=clientapp&redirect_uri=http://localhost:9001/callback&response_type=token&scope=read_userinfo&state=abc
+http://localhost:8080/oauth/authorize?client_id=first-client&redirect_uri=http://localhost:9001/callback&response_type=token&scope=read_userinfo&state=abc
 
 根据提示输入用户名密码(在WebSecurityConfig配置中)进行认证，并Approve授权。
 
