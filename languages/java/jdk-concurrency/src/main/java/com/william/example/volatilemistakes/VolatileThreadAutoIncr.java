@@ -23,7 +23,7 @@ public class VolatileThreadAutoIncr extends Thread {
         }
         synchronized (VolatileThreadAutoIncr.class) {
             numSeq += 1;
-            System.out.println(this.getId() + " numSeq is " + numSeq);
+            System.out.println(this.getId() + " auto incr numSeq is " + numSeq);
         }
     }
 
