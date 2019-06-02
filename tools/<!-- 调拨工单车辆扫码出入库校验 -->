@@ -1,0 +1,7 @@
+	<!-- 调拨工单车辆扫码出入库校验 -->
+    <interface>
+        <action>rent.bos.allocationOrder.scanCheck</action>
+        <login>true</login>
+        <class>com.hellobike.rent.bos.api.iface.AllocationOrderIface</class>
+        <method>scanCheck</method>
+    </interface>
