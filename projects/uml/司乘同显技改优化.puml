@@ -1,0 +1,9 @@
+@startuml
+App前端 -> Driver服务: 乘客或车主接单
+
+Driver服务 --> Driver服务: 创建车主出发前30分钟的定时tcp推送消息
+App前端 <-- Driver服务: 车主未点出发，到时tcp推送开启同行行程
+
+App前端 -> Driver服务: 车主点出发
+App前端 <-- Driver服务: tcp推送开启同行行程
+@enduml
