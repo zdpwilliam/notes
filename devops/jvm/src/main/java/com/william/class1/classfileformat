@@ -1,0 +1,36 @@
+.class文件格式描述
+
+1. Magic Number = cafe babe            （8字节的16进制开头）
+
+2. Minor + Major Version = 0000 0034   （8字节的16进制开头）
+    .class文件版本号，例如：
+    - jdk1.7 默认 33（16进制） 51（10进制）
+    - jdk1.8 默认 34（16进制） 52（10进制）
+
+3. constant_pool_count （常量池计数）
+
+4. constant_pool        (常量池常量索引表，从#1开始，数组长度=constant_pool_count-1，#0号常量用于标记不指向任何引用的变量)
+   - 对当前class内容的静态描述
+   -
+
+5. access_flags （）
+
+6. this_class
+
+7. super_class
+
+8. interfaces_count
+
+9. interfaces
+
+10. fields_count
+
+11. fields
+
+12. methods_count
+
+13. methods
+
+14. attributes_count - u2
+
+15. attributes

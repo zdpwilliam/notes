@@ -4,6 +4,9 @@ package com.william.algorithm.middle;
  * Created by william.zhang on 2015/9/7.
  */
 public class BinaryNode {
+
+
+
     protected Object element;
     protected BinaryNode leftNode;
     protected BinaryNode rightNode;

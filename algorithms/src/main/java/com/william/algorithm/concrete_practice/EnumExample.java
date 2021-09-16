@@ -5,7 +5,6 @@ package com.william.algorithm.concrete_practice;
 public class EnumExample {
 
     public static void main(String[] args) {
-        System.out.print(AlbumCalcDimensionType.classic.equals(AlbumCalcDimensionType.hot));
     }
     
     
