@@ -1,5 +1,6 @@
 package com.william.algorithm;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class Test {
         System.out.println(2>>1);
         System.out.println('A' + i + f);
         List<String> a = Arrays.asList("s");
+        List<String> tmp = new ArrayList<>();
 
         System.out.println(a.getClass());
         int n = 0;
