@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from src.main.python.JustCounter import *
+from python.JustCounter import *
 
 
 counter = JustCounter()

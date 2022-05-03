@@ -14,5 +14,6 @@ out
 
 **/out/
 .pyc
+**.pyc
 *.xlsx
 *.class
