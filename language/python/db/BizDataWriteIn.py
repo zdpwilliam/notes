@@ -23,8 +23,11 @@ class BizData:
         for field in fields:
             cur_field = str(field)
             match_name = "%s:" + field_name
-            if cur_field.find(match_name) > 0:
-                return cur_field.replace(match_name, "")
+            try:
+                if cur_field.find(match_name) > 0:
+                    return cur_field.replace(match_name, "")
+            except:
+                print('field_name --> %s,%s' % (field_name, fields))
         return "0"
 
 
@@ -35,11 +38,7 @@ for line in csv_reader:
     bizDataList.append(BizData(line))
 
 # 打开数据库连接
-db = pymysql.connect(host='localhost',
-                     user='root',
-                     password='',
-                     database='local-my-rpt')
-
+db = pymysql.connect(host='localhost', user='root', password='', database='local-my-rpt')
 # 使用 cursor() 方法创建一个游标对象 cursor
 cursor = db.cursor()
 # SQL 插入语句
@@ -47,12 +46,10 @@ sql = "insert into biz_data_rpt (traceId, starTime, productId, openid, pid, tcod
       " values ('%s', '%s', %s, '%s', %s, '%s', %s, %s, %s, %s, %s);"
 try:
     for bizData in bizDataList:
-        oneIn = sql % (
-            bizData.traceId, bizData.startTime, bizData.productId, bizData.openid, bizData.pid, bizData.tcode,
-            bizData.vid,
-            bizData.wid, bizData.merchantId, bizData.bosId, bizData.cid)
-    # 执行sql语句
-    cursor.execute(sql)
+        oneIn = sql % (bizData.traceId, bizData.startTime, bizData.productId, bizData.openid, bizData.pid,
+                       bizData.tcode, bizData.vid, bizData.wid, bizData.merchantId, bizData.bosId, bizData.cid)
+        # 执行sql语句
+        cursor.execute(sql)
     # 提交到数据库执行
     db.commit()
 except:
