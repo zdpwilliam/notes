@@ -14,4 +14,4 @@ for tuple_value in tuple_values:
     print(output)
     counter = (counter + 1)
 
-print "copy count: %d" % counter
+print("copy count: %d" % counter)
